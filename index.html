@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InfoSport</title>
+	<style type="text/css">
+		body {
+    		font-family: "Lato", sans-serif;
+    		background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBGSE_SAsU27z9mk3QNZ2VBxiGZEqL-aGnFw&usqp=CAU);
+    		background-repeat: none;
+    		background-size: cover;
+		}
+
+		.sidenav {
+   			height: 100%;
+   			width: 0;
+    		position: fixed;
+    		z-index: 1;
+    		top: 0;
+    		left: 0;
+    		background-color: #111;
+    		overflow-x: hidden;
+    		transition: 0.5s;
+    		padding-top: 60px;
+		}
+
+		.sidenav a {
+    		padding: 8px 8px 8px 32px;
+    		text-decoration: none;
+    		font-size: 25px;
+    		color: #818181;
+    		display: block;
+    		transition: 0.3s
+		}
+
+		.sidenav a:hover, .offcanvas a:focus{
+    		color: #f1f1f1;
+		}
+		.sidenav .closebtn {
+    		position: absolute;
+    		top: 0;
+    		right: 25px;
+    		font-size: 36px;
+    		margin-left: 50px;
+		}
+		@media screen and (max-height: 450px){
+  			.sidenav {padding-top: 15px;}
+  			.sidenav a {font-size: 18px;}
+		}
+		#current_page{
+			color: white;
+		}
+
+		h1{
+			text-align: center;
+			font-size: 70px;
+			color: black;
+		}
+		img{
+			float: left;
+			height: 400px;
+			width: 500px;
+			padding-right: 50px;
+			padding-bottom: 40px;
+		}
+		p{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="Sidenav_id" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html" id="current_page">Home</a>
+		<a href="InfoSport_FIFA.html">FIFA</a>
+		<a href="InfoSport_IPL.html">IPL</a>
+		<a href="InfoSport_NBA.html">NBA</a>
+		<a href="InfoSport_NFL.html">NFL</a>
+	</div>
+	<span style="font-size: 30px; cursor: pointer;" onclick="openNav()">☰ </span>
+
+
+
+     <h1><u>InfoSport</u></h1>
+
+    <img src="https://www.pedram-kamyab.com/wp-content/uploads/2020/12/sports.jpg">
+    <br><br>
+    <p>Have you ever wondered how many wins your favorite teams have gotten in specific sports leagues? Well, InfoSport can give you the answer to that question. We have the information on your favorite sports teams.So what are you waiting for? Search Away!</p><br><br>
+
+     <script type="text/javascript">
+     	function filter_func(){
+     		var input,filter,table,tr,td,i;
+     		input = document.getElementById("input_filter");
+     		filter= input.value.toUpperCase();
+     		table = document.getElementById("info");
+     		tr    = table.getElementsByTagName("tr");
+     		for (i = 0; i < tr.length; i++) {
+     			td= tr[i].getElementsByTagName("td")[0];
+     			if (td) {
+     				if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+
+     					tr[i].style.display="";
+     				}
+     				 else{
+     				 	tr[i].style.display="none";
+     				 }
+     			}
+     		}
+     	}
+     	function openNav(){
+     		document.getElementById("Sidenav_id").style.width="250px";
+     	}
+     	function closeNav(){
+     		document.getElementById("Sidenav_id").style.width="0";
+     	}
+
+
+     </script>
+</body>
+</html>
+
